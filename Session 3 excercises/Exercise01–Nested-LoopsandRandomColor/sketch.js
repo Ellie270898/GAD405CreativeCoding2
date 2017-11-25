@@ -20,5 +20,3 @@ for (let y=0; y <10; y++) {
   var r = random(-50, 50);
   line(50,i,50+r,i);
 }
-}
-}
