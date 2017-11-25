@@ -17,8 +17,8 @@ for (let y=0; y <10; y++) {
  }
 
  for (var i = 0; i < 100; i++) {
-  var r = random(50);
-  stroke(r*5);
-  square(50, i, 50+r, i);
+  var r = random(-50, 50);
+  line(50,i,50+r,i);
+}
 }
 }
