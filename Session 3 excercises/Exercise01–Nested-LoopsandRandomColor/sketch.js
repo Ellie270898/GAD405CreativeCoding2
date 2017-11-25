@@ -8,15 +8,11 @@ function setup() {
 function draw() {
   fill(215, 200, 170);
 
-rect(0, height/2, size, size);
-rect(50, height/2, size, size);
-rect(100, height/2, size, size);
-rect(150, height/2, size, size);
-rect(200, height/2, size, size);
-rect(250, height/2, size, size);
-rect(300, height/2, size, size);
-rect(350, height/2, size, size);
-rect(400, height/2, size, size);
-rect(450, height/2, size, size);
-
+//run the nested loop for x and y
+for (let y=0; y <10; y++) {
+  for (let x = 0; x < 10; x++) {
+    //Draw the shape at the corresponding postion
+    rect(size * x, size * y, size, size);
+  }
+ }
 }
