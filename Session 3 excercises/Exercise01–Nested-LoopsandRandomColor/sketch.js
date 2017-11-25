@@ -15,4 +15,10 @@ for (let y=0; y <10; y++) {
     rect(size * x, size * y, size, size);
   }
  }
+
+ for (var i = 0; i < 100; i++) {
+  var r = random(50);
+  stroke(r*5);
+  line(50, i, 50+r, i);
+}
 }
