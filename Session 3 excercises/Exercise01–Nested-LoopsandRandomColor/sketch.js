@@ -15,9 +15,10 @@ for (let y=0; y <10; y++) {
     rect(size * x, size * y, size, size);
    }
   }
-
+function draw() {
   quad(38, 31, 86, 20, 69, 63, 30, 76);
-  
+}
+
   translate(width/2, height/2);
   rotate(PI/3.0);
   rect(-26, -26, 52, 52);
