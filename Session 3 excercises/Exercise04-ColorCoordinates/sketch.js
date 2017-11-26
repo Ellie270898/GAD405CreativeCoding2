@@ -1,5 +1,5 @@
 var backgroundColor;
-var isOverCircle;
+var isOverRectangle;
 
 function setup()
 {
@@ -14,36 +14,34 @@ function draw()
 {
   background(backgroundColor);
 
-  // get distance between mouse and circle
-  var distance = dist(mouseX, mouseY, 200, 200);
-
-  // if the distance is less than the circle's radius
-  if(distance < 50)
+  // check if mouse is inside the rectangle
+  // mouseX >= x && mouseX <= x+width && mouseY >= y && mouseY <= y+height
+  if (mouseX >= 150 && mouseX <= 150+100 && mouseY >= 150 && mouseY <= 150+100)
   {
-    isOverCircle = true;
+    isOverRectangle = true;
   } else {
-    isOverCircle = false;
+    isOverRectangle = false;
   }
 
-  // draw a circle
-  ellipseMode(CENTER);
+  // draw a rectangle
+  rectMode(CORNER);
   stroke(0);
   strokeWeight(5);
-  if(isOverCircle == true)
+  if(isOverRectangle == true)
   {
     fill(100);
     cursor(HAND);
   } else {
-    fill(200);
-    cursor(ARROW);
+	fill(200);
+	cursor(ARROW);
   }
-  ellipse(200, 200, 100, 100);
+  rect(150, 150, 100, 100);
 
 }
 
 function mousePressed()
 {
-  if(isOverCircle == true)
+  if(isOverRectangle == true)
   {
     backgroundColor = color(random(255), random(255), random(255));
   }
