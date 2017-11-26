@@ -4,7 +4,7 @@ var isOverRectangle;
 function setup()
 {
   // set canvas size
-  createCanvas(400, 400);
+  createCanvas(200, 200);
 
   // default background color
   backgroundColor = color(255, 255, 255);
@@ -43,6 +43,6 @@ function mousePressed()
 {
   if(isOverRectangle == true)
   {
-    backgroundColor = color(random(255), random(255), random(255));
+    rectangleColor = color(random(255), random(255), random(255));
   }
 }
