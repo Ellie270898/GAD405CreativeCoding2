@@ -43,6 +43,6 @@ function mousePressed()
 {
   if(isOverRectangle == true)
   {
-    rectangleColor = color(random(255), random(255), random(255));
+    rectangle fill = color(random(255), random(255), random(255));
   }
 }
