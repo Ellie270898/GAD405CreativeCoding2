@@ -26,7 +26,7 @@ function draw()
   // draw a rectangle
   rectMode(CORNER);
   stroke(0);
-  strokeWeight(5);
+  strokeWeight(2);
   if(isOverRectangle == true)
   {
     fill(100);
@@ -43,6 +43,6 @@ function mousePressed()
 {
   if(isOverRectangle == true)
   {
-    backgroundColor = color(random(255), random(255), random(255));
+    fill = color(random(255), random(255), random(255));
   }
 }
