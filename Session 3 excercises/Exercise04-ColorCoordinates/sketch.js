@@ -24,6 +24,6 @@ function draw() {
 
   //fourth square
   fill(mouseX, mouseY, 50, 85, 125)
-  rect(200, 200, 400, 400)
+  rect(0, 200, 400, 400)
   noFill()
 }

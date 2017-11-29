@@ -4,8 +4,10 @@ let b = 255;
 
 let speed = 3;
 let diameter = 50;
-let x1;
+//let x1;
 let y1;
+let x2
+let y2;
 
 function setup() {
   createCanvas (500, 500);
@@ -19,6 +21,7 @@ function draw() {
   y1 += random(-speed, speed);
   x1 = constrain(x1, 0, width);
   y1 = constrain(y1, 0, height);
+
   if (mouseIsPressed) {
     r = random(255);
     g = random(255);

@@ -1,0 +1,33 @@
+body{
+  //resets the padding to 0 so that the style elements of html are reset.
+  padding: 0;
+  margin: 0;
+}
+h1{
+  color: #c842f4;
+  padding: 20px;
+}
+
+.newHeadings{
+  text-decoration: underline;
+  font-family: sans-serif;
+  border: 5px solid #999999;
+  padding: 5px;
+}
+
+#lastHeading{
+  font-family: monospace;
+  color: #ff7cf8;
+}
+
+header{
+  background-color: #ffd1fc;
+  width: 100%;
+  height: 100px;
+}
+
+footer{
+  background-color: #e9a8ff;
+  width: 100%;
+  height: 200px;
+}
