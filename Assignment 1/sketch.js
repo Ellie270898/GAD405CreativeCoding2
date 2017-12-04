@@ -17,7 +17,7 @@ background(0,0,0);
 noLoop();
 
 //create 100 stars in random positions on the canvas
-for(let i=0; i<400; i++){
+for(let i=0; i<500; i++){
 push();
 translate(random(width), random(height));
 star(i);
