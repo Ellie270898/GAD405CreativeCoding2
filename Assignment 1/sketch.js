@@ -8,12 +8,15 @@ let b = 255;
 let colourSlider;
 let colourSlider2;
 let colourSlider3;
+
 let colourSlider4;
 let colourSlider5;
 let colourSlider6;
+
 let colourSlider7;
 let colourSlider8;
 let colourSlider9;
+
 
 function setup() {
   var canvas = createCanvas(594, 841);
@@ -46,11 +49,6 @@ function setup() {
   setupBackgroundStars();
 }
 
-function keyPressed() {
-  if (keyCode === "49") {
-    console.log();
-  }
-}
 
 function draw(){
   background(0,0,0);
@@ -456,8 +454,6 @@ function drawBackgroundStars(){
    pop();
    //noLoop();
   }
-
-
 
 
  //This is the code for a singular star. The opacity is random, the colour is white and the size is 3 pixels.
