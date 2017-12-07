@@ -5,15 +5,6 @@ let starParameters = [];
 let r = 255;
 let g = 255;
 let b = 255;
-let colourSlider;
-let colourSlider2;
-let colourSlider3;
-let colourSlider4;
-let colourSlider5;
-let colourSlider6;
-let colourSlider7;
-let colourSlider8;
-let colourSlider9;
 
 function setup() {
   var canvas = createCanvas(594, 841);
@@ -21,28 +12,6 @@ function setup() {
   frameRate(45);
   canvas.parent("myContainer");
   canvas.class("myCanvas");
-//rgb sliders for planet 1
-  colourSlider=createSlider(0, 255, 100);
-  colourSlider.parent("colourSliderContainer");
-  colourSlider2=createSlider(0, 255, 0);
-  colourSlider2.parent("colourSlider2Container");
-  colourSlider3=createSlider(0, 255, 255);
-  colourSlider3.parent("colourSlider3Container");
-//rgb sliders for planet 2
-  colourSlider4=createSlider(0, 255, 100);
-  colourSlider4.parent("colourSlider4Container");
-  colourSlider5=createSlider(0, 255, 0);
-  colourSlider5.parent("colourSlider5Container");
-  colourSlider6=createSlider(0, 255, 255);
-  colourSlider6.parent("colourSlider6Container");
-//rgb sliders for planet 3
-  colourSlider7=createSlider(0, 255, 100);
-  colourSlider7.parent("colourSlider7Container");
-  colourSlider8=createSlider(0, 255, 0);
-  colourSlider8.parent("colourSlider8Container");
-  colourSlider9=createSlider(0, 255, 255);
-  colourSlider9.parent("colourSlider9Container");
-
   setupBackgroundStars();
 }
 
@@ -54,18 +23,6 @@ function keyPressed() {
 
 function draw(){
   background(0,0,0);
-  //planet 1 rgb
-  colourValue=colourSlider.value();
-  colourValue2=colourSlider2.value();
-  colourValue3=colourSlider3.value();
-  //planet 2 rgb
-  colourValue4=colourSlider4.value();
-  colourValue5=colourSlider5.value();
-  colourValue6=colourSlider6.value();
-  //planet 3 rgb
-  colourValue7=colourSlider7.value();
-  colourValue8=colourSlider8.value();
-  colourValue9=colourSlider9.value();
   drawBackgroundStars();
   //This code should create the circular motion for the galaxy.
     angle += 0.0006;
@@ -74,6 +31,12 @@ function draw(){
 
     let x = map(sinValueX, -1, 1, 0, width-50);
     let y = map(sinValueY, -1, 1, 0, width-50);
+
+  if (mouseIsPressed) {
+      r = random(255);
+      g = random(255);
+      b = random(255);
+    }
 
     //This is a large circle to add depth to the galaxy.
   fill(255, 255, 255, 20);
@@ -437,11 +400,9 @@ function draw(){
     ellipse(-60+x, -184+y, 8, 5);
 
     //This code is for the induvidual planets
-    fill(colourValue, colourValue2, colourValue3);
-    ellipse(-230+x, -200+x, 40, 40);
-    fill(colourValue4, colourValue5, colourValue6);
+      fill(255, 255, 255);
     ellipse(25+y, 282+y, 65, 65);
-    fill(colourValue7, colourValue8, colourValue9);
+    ellipse(-230+x, -200+x, 40, 40);
     ellipse(-350+y, 450+y, 250, 250);
 
  }
