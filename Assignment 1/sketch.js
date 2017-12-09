@@ -1,3 +1,5 @@
+///////GAD-405 CREATIVE CODING - ASSIGNEMNT ///////#
+//These are the variables
 let Opacityshape;
 let angle = 0;
 let speed;
@@ -17,40 +19,45 @@ let colourSlider7;
 let colourSlider8;
 let colourSlider9;
 
+var value= (255, 255, 255);
 
+//This is the setup function - the first things to load on the page
 function setup() {
+  //the canvas is where the sketch will be
   var canvas = createCanvas(594, 841);
-  //background(0,0,0);
+  //How many FPS
   frameRate(45);
+  //Allows me to further edit the canvas if it is a var
   canvas.parent("myContainer");
   canvas.class("myCanvas");
-//rgb sliders for planet 1
+  //rgb sliders for planet 1
   colourSlider=createSlider(0, 255, 100);
   colourSlider.parent("colourSliderContainer");
   colourSlider2=createSlider(0, 255, 0);
   colourSlider2.parent("colourSlider2Container");
   colourSlider3=createSlider(0, 255, 255);
   colourSlider3.parent("colourSlider3Container");
-//rgb sliders for planet 2
+  //rgb sliders for planet 2
   colourSlider4=createSlider(0, 255, 100);
   colourSlider4.parent("colourSlider4Container");
   colourSlider5=createSlider(0, 255, 0);
   colourSlider5.parent("colourSlider5Container");
   colourSlider6=createSlider(0, 255, 255);
   colourSlider6.parent("colourSlider6Container");
-//rgb sliders for planet 3
+  //rgb sliders for planet 3
   colourSlider7=createSlider(0, 255, 100);
   colourSlider7.parent("colourSlider7Container");
   colourSlider8=createSlider(0, 255, 0);
   colourSlider8.parent("colourSlider8Container");
   colourSlider9=createSlider(0, 255, 255);
   colourSlider9.parent("colourSlider9Container");
-
+//This will create and randomly plot the stars
   setupBackgroundStars();
 }
 
 
 function draw(){
+  //makes the background black
   background(0,0,0);
   //planet 1 rgb
   colourValue=colourSlider.value();
@@ -64,6 +71,8 @@ function draw(){
   colourValue7=colourSlider7.value();
   colourValue8=colourSlider8.value();
   colourValue9=colourSlider9.value();
+  //second layer of galaxy rgb
+  //redraw the stars again
   drawBackgroundStars();
   //This code should create the circular motion for the galaxy.
     angle += 0.0006;
@@ -73,14 +82,7 @@ function draw(){
     let x = map(sinValueX, -1, 1, 0, width-50);
     let y = map(sinValueY, -1, 1, 0, width-50);
 
-    //This is a large circle to add depth to the galaxy.
-  fill(255, 255, 255, 20);
-    //rotate(PI/9.0)
-    //ellipse(100+x, -110+y, 310, 230);
-  //This code is for the white parts of the galaxy.
-  fill(255, 255, 255);
-   //rotate(PI/0);
-  //fill (r, g, b, 120);
+  //The induvidual circles making up the galaxy
   noStroke();
     ellipse(7+x, 17+y, 5, 5);
     ellipse(2+x, 38+y, 7, 7);
@@ -428,13 +430,93 @@ function draw(){
       fill(255, 255, 255, 182);
     ellipse(-47+x, -220+y, 6, 6);
     ellipse(-55+x, -203+y, 7, 8);
-      fill(255, 255, 255);
+      fill(255);
     ellipse(-38+x, -193+y, 4, 4);
     ellipse(-25+x, -202+y, 5, 5);
     ellipse(-30+x, -206+y, 6, 6);
     ellipse(-60+x, -184+y, 8, 5);
 
-    //This code is for the induvidual planets
+ mouseReleased();
+
+      ellipse(7+x, 17+y, 5, 5);
+      ellipse(2+x, 38+y, 7, 7);
+      ellipse(8+x,  -0+y, 5, 5);
+      ellipse(-4+x,  14+y, 7, 7);
+      ellipse(-25+x, 15+y, 5, 5);
+      ellipse(-38+x,-4+y, 5, 5);
+      ellipse(-27+x, -24+y, 8, 8);
+      ellipse(-3+x,  -20+y, 8, 8);
+      ellipse(-10+x, -40+y, 7, 7);
+      ellipse(-8+x, -52+y, 10, 10);
+      ellipse(50+x, -72+y, 8, 7);
+      ellipse(60+x, -86+y, 12, 11);
+      ellipse(49+x, -64+y, 7, 7);
+      ellipse(41+x, -53+y, 5, 5);
+      ellipse(40+x, -43+y, 5, 5);
+      ellipse(46+x, -90+y, 5, 5);
+      ellipse(50+x, -100+y, 6, 6);
+      ellipse(-54+x, -46+y, 9, 9);
+      ellipse(-54+x, -30+y, 3, 4);
+      ellipse(70+x, -60+y, 8, 8);
+      ellipse(62+x, -48+y, 5, 5);
+      ellipse(60+x, -120+y, 5, 5);
+      ellipse(40+x, -130+y, 8, 8);
+      ellipse(20+x, -140+y, 8, 5);
+      ellipse(80+x, -170+y, 5, 5);
+      ellipse(77+x, -190+y, 8, 8);
+      ellipse(40+x, 2+y, 6, 6);
+      ellipse(47+x, 14+y, 6, 6);
+      ellipse(31+x, 2+y, 6, 6);
+      ellipse(20+x, 7+y, 10, 8);
+      ellipse(61+x, 39+y, 2, 2);
+      ellipse(51+x, 52+y, 3, 3);
+      ellipse(97+x, 43+y, 4, 4);
+      ellipse(34+x, 44+y, 4, 4);
+      ellipse(40+x, -12+y, 3, 3);
+      ellipse(72+x, -28+y, 4, 4);
+      ellipse(74+x, -22+y, 4, 4);
+      ellipse(80+x, -10+y, 8, 8);
+      ellipse(44+x, -32+y, 6, 6);
+      ellipse(47+x, -29+y, 6, 6);
+      ellipse(21+x, -23+y, 3, 3);
+      ellipse(74+x, -36+y, 4, 4);
+      ellipse(100+x, -110+y, 8, 8);
+      ellipse(150+x, -30+y, 7, 8);
+      ellipse(109+x, -58+y, 4, 5);
+      ellipse(107+x, -200+y, 4, 4);
+      ellipse(52+x, -15+y, 10, 10);
+      ellipse(95+x, 12+y, 4, 4);
+      ellipse(100+x, 10+y, 4, 8);
+      ellipse(65+x, -0+y, 6, 4);
+      ellipse(100+x, -40+y, 5, 4);
+      ellipse(138+x, -17+y, 6, 6);
+      ellipse(150+x, -150+y, 8, 8);
+      ellipse(200+x, -80+y, 7, 8);
+      ellipse(157+x, -250+y, 4, 4);
+      ellipse(152+x, -74+y, 4, 4);
+      ellipse(205+x, -150+y, 6, 6);
+      ellipse(175+x, -200+y, 6, 6);
+      ellipse(160+x, -180+y, 8, 8);
+      ellipse(190+x, -160+y, 4, 4);
+      ellipse(163+x, -190+y, 6, 8);
+      ellipse(184+x, -215+y, 4, 4);
+      ellipse(184+x, -235+y, 4, 4);
+      ellipse(147+x, -225+y, 9, 9);
+      ellipse(63+x,  -288+y, 7, 7);
+      ellipse(87+x,  -290+y, 4, 4);
+      ellipse(120+x, -290+y, 9, 6);
+      ellipse(53+x,  -272+y, 6, 6);
+      ellipse(50+x,  -248+y, 4, 4);
+      ellipse(27+x,  -263+y, 8, 10);
+      ellipse(17+x,  -264+y, 7, 7);
+      ellipse(15+x,  -243+y, 7, 7);
+      ellipse(8+x,   -235+y, 9, 9);
+      ellipse(3+x,   -255+y, 7, 7);
+      ellipse(-28+x, -223+y, 8, 8);
+      ellipse(-32+x, -210+y, 6, 6);
+      ellipse(-60+x, -174+y, 8, 5);
+
+  //This code is for the induvidual planets
     fill(colourValue, colourValue2, colourValue3);
     ellipse(-230+x, -200+x, 40, 40);
     fill(colourValue4, colourValue5, colourValue6);
@@ -472,3 +554,22 @@ function drawBackgroundStars(){
    }
 
  }
+
+function mouseReleased() {
+   if (value == 255, 255, 255) {
+      fill(0, 26, 102);
+    }
+  }
+
+  function mouseReleased() {
+     if (value == 255) {
+
+        fill(0, 26, 102);}
+      }
+
+
+
+    //function mouseClicked1() {
+      //ellipse(mouseX, mouseY, 5, 5);
+      // prevent default
+      //return false;
